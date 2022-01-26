@@ -1,2 +1,2 @@
 # csci3230
-web application development
+web application development assignments/labs
