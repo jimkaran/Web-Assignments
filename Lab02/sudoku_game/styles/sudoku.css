@@ -1,0 +1,56 @@
+#board{
+    border: 3px solid black;
+    margin-top: 5-rem;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+#board td{
+    border: 1px solid black;
+    font-size: 200%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+#board td:hover, #palette td:hover{
+    background-color: #f5dd90;
+}
+#board tr:nth-child(3n) {
+    border-bottom: solid 3px black;
+}
+#board td:nth-child(3n) {
+    border-right: solid 3px black;
+}
+
+#palette{
+    padding-top: 10%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#palette td{
+    border: 1px solid black;
+    font-size: 200%;
+    font-family: Helvetica, sans-serif;
+    color: rgb(54, 54, 54);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+#undo{
+    height: 40%;
+    width: 40%;
+}
+
+.user-input{
+    background-color: #f2f2f2;
+}
+
+.error{
+    background-color: #f76c5e;
+}
