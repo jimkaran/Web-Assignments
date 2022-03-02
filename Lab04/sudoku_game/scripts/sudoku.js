@@ -19,8 +19,9 @@ $(document).ready(function(){
         let tr = $('<tr>')
         for (let columns = 0; columns < 9; columns++){
             let td = $('<td>')
-            td.attr('id', ' ' + rows + columns)
+            td.attr('id', 'cell' + rows + columns)
             td.text(numbers[rows][columns] == -1 ? "" : numbers[rows][columns])
+            td.click(boardClick)
             tr.append(td)
         }
         board.append(tr);
@@ -28,12 +29,37 @@ $(document).ready(function(){
     
     //generating the palette
     let palette = $('#palette');
-    let undo_img = $('<td><img src="./images/undo.png" alt="undo" id="undo"></td>')
-    for (let items = 1; items < 10; items++){
+    for (let items = 1; items < 11; items++){
         let td = $('<td>')
-        td.text(items)
+        td.attr('id', ' ' + items)
+
+        //last table data should be undo image
+        if (td.attr('id') == 10){
+            td.append('<img src="./images/undo.png" alt="undo" id="undo">')
+        }
+        else{
+            td.text(items)
+        }
+        td.click(paletteClick)
         palette.append(td)
     }
 
-    palette.append(undo_img)
+    var paletteValue = ''
+    var boardValue = ''
+    var boardTdData = ''
+
+    function paletteClick(){
+        //if undo button is clicked, undo the last move.
+        if($(this).attr('id') == 10){
+            $('#board').find('td#'+boardTdData).text(boardValue)
+        } else{
+            paletteValue = $(this).text()
+        }
+    }
+    // save the board value, and board td data to variables and change the board with the palette value
+    function boardClick(){
+        boardValue = $(this).text()
+        boardTdData = $(this).attr('id')
+        $(this).text(paletteValue)
+    }
 })
