@@ -60,6 +60,10 @@ $(document).ready(function(){
     function boardClick(){
         boardValue = $(this).text()
         boardTdData = $(this).attr('id')
-        $(this).text(paletteValue)
+
+        if(paletteValue != ''){
+            $(this).text(paletteValue)
+        }
+        //TODO: GET ERROR HANDLING WORKING
     }
 })
