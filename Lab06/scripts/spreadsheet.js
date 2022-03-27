@@ -161,6 +161,14 @@ $(document).ready(function(){
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        //Chart Title
+        svg.append("text")
+        .attr("x", width/2)
+        .attr("y", margin.top-30)
+        .attr("text-anchor", "middle")
+        .style("font-size", "18px")
+        .text("Grade Distribution");
     
     
         // X axis
@@ -203,7 +211,7 @@ $(document).ready(function(){
         .attr("y", d => y(d.frequency))
         .attr("width", x.bandwidth())
         .attr("height", d => height - y(d.frequency))
-        .attr("fill", "#69b3a2")
+        .attr("fill", "#6666ff")
     
         }
 
