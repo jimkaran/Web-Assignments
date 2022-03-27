@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    for (let rows = 1; rows < 5; rows++){
+    for (let rows = 1; rows < 11; rows++){
         let row = $('tr:nth-child(' + rows + ') th')
         // IF THE STUDENT ID HEADER IS CLICKED ERASE THE HIGHLIGHTING
         if (rows == 1){
@@ -18,7 +18,7 @@ $(document).ready(function(){
         }
     }
 
-    for (let columns = 2; columns < 5; columns++){
+    for (let columns = 2; columns < 11; columns++){
         // IF ASSIGNMENTS ARE CLICKED, HIGHLIGHT THE COLUMNS
         let column = $('tr th:nth-child(' + columns + ')')
         column.click(function selectColumn(){
