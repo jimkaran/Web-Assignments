@@ -24,3 +24,7 @@
 .selected{
     background-color: #e0e0ff;
 }
+
+#graph{
+    text-align: center;
+}
