@@ -1,0 +1,30 @@
+#spreadsheet{
+    border: 1px solid black;
+    margin-top: 50px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+#spreadsheet td{
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+
+}
+
+#spreadsheet th{
+    border: 1px solid black;
+    background-color: #d0d0d0;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
+
+.selected{
+    background-color: #e0e0ff;
+}
+
+#graph{
+    text-align: center;
+}
