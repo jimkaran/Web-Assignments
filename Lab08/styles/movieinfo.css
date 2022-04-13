@@ -1,0 +1,18 @@
+#header{
+    padding: 40px;
+    text-align: left;
+    background: #c73931;
+    color: white;
+    font-size: 20px;
+}
+
+#movieTable tr {
+    border-bottom: 1pt solid black;
+  }
+  #movieTable td {
+    padding-left: 1rem;
+  }
+
+#movieInfo{
+    text-align: center;
+}
